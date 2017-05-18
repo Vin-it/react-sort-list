@@ -1,6 +1,6 @@
 {
   "name": "react-sort-list",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "lib/index.js",
   "author": "Vinit Kumbharkar",
@@ -9,6 +9,10 @@
     "path": "^0.12.7",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vin-it/react-sort-list.git"
   },
   "peerDependencies": {
     "react": "^15.5.4",
