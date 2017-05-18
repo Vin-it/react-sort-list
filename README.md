@@ -47,10 +47,9 @@ export default class App extends React.Component {
 }
 ```
 There are few things to keep in mind as you use this module, and they are demonstrated in the above example: 
-    1. For now, this component will only work if you have an array of objects with an id for the object. (Might add more features in upcoming days).
-    2. The items that you want to be draggable, wrap it around ```<SortableItem></SortableItem>```. (Remember, don't wrap the entire list, but each individual element in the list)
-    3. The ```<SortableItem>``` element needs the array list in the "items" prop, and id of the each individual item in the "id" prop, and a method as the "swap" prop. This prop will return two indexes that will swap that array items.  
-    
+  - For now, this component will only work if you have an array of objects with an id for the object. (Might add more features in upcoming days).
+  - The items that you want to be draggable, wrap it around ```<SortableItem></SortableItem>```. (Remember, don't wrap the entire list, but each individual element in the list)
+  - The ```<SortableItem>``` element needs the array list in the "items" prop, and id of the each individual item in the "id" prop, and a method as the "swap" prop. This prop will return two indexes that will swap that array items.
 In the above example we have used 
 ```
  <li> {todo.title} </li>
