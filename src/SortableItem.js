@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import findIndex from 'lodash/findIndex';
 import DropContainer from './DropContainer.js';
 
 let dragIndex = null;
@@ -16,7 +16,7 @@ export class SortableItem extends React.Component {
         this.props.swap(dragIndex, dropIndex);
     }
     onDragOver(itemId, event) {
-        let dropItemIndex = _.findIndex(this.props.items, { id: itemId });
+        let dropItemIndex = findIndex(this.props.items, { id: itemId });
         this.setState({
             dropItemIndex: dropItemIndex
         })
@@ -27,7 +27,7 @@ export class SortableItem extends React.Component {
         this.swapArrayPositions(dragItemIndex, dropItemIndex)
     }
     onDragStart(itemId, event) {
-        let dragItemIndex = _.findIndex(this.props.items, { id: itemId });
+        let dragItemIndex = findIndex(this.props.items, { id: itemId });
         this.state.dragItemIndex = dragItemIndex;
         dragIndex = dragItemIndex;
         event.dataTransfer.setData("text", event.target.id);
