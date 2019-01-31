@@ -3,7 +3,6 @@ import React from 'react';
 export default class DropContainer extends React.Component {
     onDragOver(itemId, event) {
         event.preventDefault();
-        this.props.onDragOver(itemId, event);
     }
     render() {
         let style = {
