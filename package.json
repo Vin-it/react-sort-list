@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "author": "Vinit Kumbharkar",
   "license": "MIT",
+  "keywords": ["react", "drag and drop", "list"],
   "dependencies": {
     "lodash": "^4.17.11",
     "path": "^0.12.7",
