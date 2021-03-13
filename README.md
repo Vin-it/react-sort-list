@@ -10,7 +10,9 @@ npm install react-sort-list
 
 #### Example & How to use
 
-Here is an example, and explaination is at the bottom.
+#### Class Component
+
+Here are examples (class and functional components), and explaination is at the bottom.
 
 ```
 import React from 'react';
@@ -54,6 +56,46 @@ export default class App extends React.Component {
         )
     }
 }
+```
+
+#### Functional component example
+
+```
+import { SortableItem, swapArrayPositions } from 'react-sort-list';
+import { useState } from 'react';
+
+let todos = [
+  {id: 1, title: "Task 1"},
+  {id: 2, title: "Task 2"},
+  {id: 3, title: "Task 3"}
+]
+
+
+
+function App() {
+  const [todoState, setTodoState] = useState(todos);
+
+  function swap(dragIndex, dropIndex) {
+    let swappedTodos = swapArrayPositions(todoState, dragIndex, dropIndex);
+
+    setTodoState([...swappedTodos]);    
+  }
+
+  return (
+  <ul>
+      {todoState.map(function (todo, index) {
+          return (
+            <SortableItem items={todoState} id={todo.id} key={todo.id} swap={swap} >
+              <li> {todo.title} </li>
+            </SortableItem>
+          )
+      })}
+    </ul>
+  );
+}
+
+export default App;
+
 ```
 
 There are few things to keep in mind as you use this module, and they are demonstrated in the above example:
