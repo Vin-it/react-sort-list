@@ -1,13 +1,17 @@
 {
   "name": "react-sort-list",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Drag and Drop sortable list for React",
   "main": "lib/index.js",
   "author": "Vinit Kumbharkar",
   "license": "MIT",
-  "keywords": ["react", "drag and drop", "list"],
+  "keywords": [
+    "react",
+    "drag and drop",
+    "list"
+  ],
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "path": "^0.12.7",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
