@@ -42,10 +42,10 @@ export default class App extends React.Component {
     render() {
         return (
             <ul>
-                {todos.map(function (todo, index) {
+                {this.state.todos.map(function (todo, index) {
                     return (
                         // Don't forget to have items, id, and swap properties.
-                        <SortableItem items={todos} id={todo.id} key={todo.id} swap={this.swap} >
+                        <SortableItem items={this.state.todos} id={todo.id} key={todo.id} swap={this.swap} >
                             <li> {todo.title} </li>
                         </SortableItem>
                     )
