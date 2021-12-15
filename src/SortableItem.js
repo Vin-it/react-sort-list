@@ -5,7 +5,6 @@ import DropContainer from "./DropContainer.js";
 let gState = {};
 
 const reducer = (state, action) => {
-  console.log(state, action.type, action.payload);
   switch (action.type) {
     case "ON_DRAG_START":
       return Object.assign(state, action.payload);
