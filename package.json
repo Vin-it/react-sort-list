@@ -1,6 +1,6 @@
 {
   "name": "react-sort-list",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Drag and Drop sortable list for React",
   "main": "lib/index.js",
   "author": "Vinit Kumbharkar",
