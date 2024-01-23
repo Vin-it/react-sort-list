@@ -48,7 +48,6 @@ export class SortableItem extends React.Component {
             draggable="true"
             onDragStart={this.onDragStart.bind(this, this.props.id)}
             onDrop={this.onDrop.bind(this, this.props.id)}
-            id={this.props.id}
           >
             {this.props.children}
           </div>
