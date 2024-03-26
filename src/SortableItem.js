@@ -1,5 +1,4 @@
 import React from "react";
-import findIndex from "lodash/findIndex";
 import DropContainer from "./DropContainer.js";
 
 let gState = {};
@@ -26,12 +25,12 @@ export class SortableItem extends React.Component {
     gState = reducer(gState, action);
   }
   onDrop(itemId, event) {
-    let dropItemIndex = findIndex(this.props.items, { id: itemId });
+    let dropItemIndex = this.props.items.findIndex((i) => i.id === itemId);
     this.dispatch({ type: "ON_DROP", payload: { dropItemIndex: dropItemIndex } });
     this.swapArrayPositions(gState.dragItemIndex, gState.dropItemIndex)
   }
   onDragStart(itemId, event) {
-    let dragItemIndex = findIndex(this.props.items, { id: itemId });
+    let dragItemIndex = this.props.items.findIndex((i) => i.id === itemId);
     this.dispatch({ type: "ON_DRAG_START", payload: { dragItemIndex: dragItemIndex } });
   }
   renderTasks() {
