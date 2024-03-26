@@ -5,14 +5,10 @@ export default class DropContainer extends React.Component {
         event.preventDefault();
     }
     render() {
-        let style = {
-            width: "50%",
-            // border: "1px solid #aaaaaa",
-        }
-        return ( 
+        return (
             <div draggable="false"
                 onDragOver={this.onDragOver.bind(this, this.props.id)}
-                style={style} className="dropBox">
+                className="dropBox">
                 {this.props.children}
             </div>
         )
